@@ -11,34 +11,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20201207163145) do
-
-  create_table "cabins", force: :cascade do |t|
-    t.string   "cabin_name"
-    t.boolean  "tv"
-    t.boolean  "swimming_pool"
-    t.boolean  "laundry"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "rooms", force: :cascade do |t|
-    t.string   "room_name"
-    t.integer  "occupancy_limit"
-    t.boolean  "fireplace"
-    t.string   "cabin_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string   "first_name"
-    t.string   "last_name"
-    t.string   "email"
-    t.string   "pasword"
-    t.string   "room_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+ActiveRecord::Schema.define(version: 0) do
 
 end
