@@ -1,5 +1,6 @@
 class Cabin < ActiveRecord::Base
-    has_many :rooms
-    has_many :users, through: :rooms
+    belongs_to :user
+    has_many :guests
+    
 
   end
