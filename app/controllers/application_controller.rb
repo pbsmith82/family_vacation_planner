@@ -10,7 +10,6 @@ class ApplicationController < Sinatra::Base
   end
 
   get "/" do
-    #binding.pry
     erb :index
   end
 
@@ -18,16 +17,8 @@ class ApplicationController < Sinatra::Base
     erb :index
   end
 
-  post '/signup' do
-    @user = User.new(first_name: params["first_name"], last_name: params["last_name"], email: params["email"], password: params["password"])
-    @user.save
-    session[:user_id] = @user.id
-
-    redirect '/users/home'
-  end
-
-
-  get '/sessions/logout' do
+  
+  get '/logout' do
     session.clear
     redirect '/login'
   end
@@ -55,6 +46,7 @@ class ApplicationController < Sinatra::Base
     end
 
     helpers do
+
       def logged_in?
         !!session[:user_id]
       end
@@ -62,6 +54,7 @@ class ApplicationController < Sinatra::Base
       def current_user
         User.find(session[:user_id])
       end
+
     end
 
 end
