@@ -1,5 +1,5 @@
 Cabin.create(
-    cabin_name: "Roster Cabin", 
+    name: "Roster Cabin", 
     tv: true, 
     swimming_pool: true,
     laundry: true,
@@ -7,7 +7,7 @@ Cabin.create(
     )
 
 Cabin.create(
-    cabin_name: "Farmers Cabin", 
+    name: "Farmers Cabin", 
     tv: false, 
     swimming_pool: true,
     laundry: false,
@@ -15,7 +15,7 @@ Cabin.create(
     )
 
 Cabin.create(
-    cabin_name: "Sunset Cabin", 
+    name: "Sunset Cabin", 
     tv: true, 
     swimming_pool: false,
     laundry: true,
